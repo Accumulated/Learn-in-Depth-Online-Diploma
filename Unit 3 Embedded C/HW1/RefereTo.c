@@ -36,8 +36,3 @@ uint32_t const volatile * Const Preg2 = (uint32_t const volatile *) (0xFFFF0004)
 // That's a constant pointer that points to volatile data of type uint32_t
 // Const is used to guard the pointer from unexpected changes from C code
 uint32_t volatile *const Preg1 = (uint32 _t volatile *) (0xFFFF0000);
-
-
-
-
-
