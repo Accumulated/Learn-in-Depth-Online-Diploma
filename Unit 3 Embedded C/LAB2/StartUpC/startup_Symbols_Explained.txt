@@ -1,0 +1,43 @@
+Symbol: _E_bss -> is an undefined symbol, make sure the linker
+	 sees this symbol in another file.
+
+Symbol: _E_data -> is an undefined symbol, make sure the linker
+	 sees this symbol in another file.
+
+Symbol: _S_bss -> is an undefined symbol, make sure the linker
+	 sees this symbol in another file.
+
+Symbol: _S_data -> is an undefined symbol, make sure the linker
+	 sees this symbol in another file.
+
+Symbol: _stack_top -> is an undefined symbol, make sure the linker
+	 sees this symbol in another file.
+
+Symbol: Bus_Handler -> This symbol refers to a weak symbol that can be overridden
+	  by another symbol with the same name that is defined elsewhere. 
+	 Weak symbols provide a fallback mechanism for symbols that might not be defined in all cases..
+
+Symbol: Default_Handler ->  This symbol refers to a code section in the 
+	object file, such as a function or a global constant.
+
+Symbol: HardFault_Handler -> This symbol refers to a weak symbol that can be overridden
+	  by another symbol with the same name that is defined elsewhere. 
+	 Weak symbols provide a fallback mechanism for symbols that might not be defined in all cases..
+
+Symbol: main -> is an undefined symbol, make sure the linker
+	 sees this symbol in another file.
+
+Symbol: NMI_Handler -> This symbol refers to a weak symbol that can be overridden
+	  by another symbol with the same name that is defined elsewhere. 
+	 Weak symbols provide a fallback mechanism for symbols that might not be defined in all cases..
+
+Symbol: Reset_Handler ->  This symbol refers to a code section in the 
+	object file, such as a function or a global constant.
+
+Symbol: UsageFault_Handler -> This symbol refers to a weak symbol that can be overridden
+	  by another symbol with the same name that is defined elsewhere. 
+	 Weak symbols provide a fallback mechanism for symbols that might not be defined in all cases..
+
+Symbol: vectors -> This symbol refers to a data section in the 
+	object file, such as a global or static variable definition..
+
