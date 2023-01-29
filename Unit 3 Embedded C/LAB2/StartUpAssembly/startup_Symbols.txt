@@ -1,3 +1,0 @@
-00000000 t _reset
-         U main
-00000006 t Vector_Handler

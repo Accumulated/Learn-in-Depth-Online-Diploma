@@ -10,7 +10,7 @@ OBJ =  $(SRC:.c=.o)
 ASSEM_S = $(wildcard *.s)
 ASSEM_O = $(ASSEM_S:.s=.o)
 
-SymbolosExplainer = ExplainSymbols.py
+SymbolosExplainer = PYcommon/ExplainSymbols.py
 
 ProjectName = CortexM3
 

@@ -7,7 +7,7 @@ LIBS =
 SRC = $(wildcard *.c)
 OBJ =  $(SRC:.c=.o)
 
-SymbolosExplainer = ExplainSymbols.py
+SymbolosExplainer = PYcommon/ExplainSymbols.py
 
 ProjectName = CortexM3
 
