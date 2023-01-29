@@ -1,0 +1,6 @@
+Symbol: main ->  This symbol refers to a code section in the 
+	object file, such as a function or a global constant.
+
+Symbol: ODR_13 -> This symbol refers to a data section in the 
+	object file, such as a global or static variable definition..
+

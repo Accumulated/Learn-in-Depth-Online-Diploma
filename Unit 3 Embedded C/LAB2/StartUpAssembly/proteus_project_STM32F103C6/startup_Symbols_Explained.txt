@@ -1,0 +1,7 @@
+Symbol: _reset ->  is a local symbol.
+
+Symbol: main -> is an undefined symbol, make sure the linker sees 
+	 this symbol in another file.
+
+Symbol: Vector_Handler ->  is a local symbol.
+

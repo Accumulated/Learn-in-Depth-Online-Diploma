@@ -1,0 +1,9 @@
+Symbol: _reset ->  This symbol refers to a code section in the 
+	object file, such as a function or a global constant.
+
+Symbol: main -> is an undefined symbol, make sure the linker
+	 sees this symbol in another file.
+
+Symbol: Vector_Handler ->  This symbol refers to a code section in the 
+	object file, such as a function or a global constant.
+

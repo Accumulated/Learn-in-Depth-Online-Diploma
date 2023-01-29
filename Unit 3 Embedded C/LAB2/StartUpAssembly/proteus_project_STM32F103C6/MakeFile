@@ -1,0 +1,48 @@
+
+CC = arm-none-eabi-
+CFLAGS = -mcpu=cortex-m3 #-gdwarf-2
+INCS = -I .
+LIBS =
+
+SRC = $(wildcard *.c)
+OBJ =  $(SRC:.c=.o)
+
+ASSEM_S = $(wildcard *.s)
+ASSEM_O = $(ASSEM_S:.s=.o)
+
+SymbolosExplainer = ExplainSymbols.py
+
+ProjectName = CortexM3
+
+
+all: $(ProjectName).bin ExplainSymbols
+	@echo "Build Done"
+
+
+%.o: %.s
+	@$(CC)as.exe $(CFLAGS) $< -o $@
+	@$(CC)nm.exe $@ > $(basename $(@))_Symbols.txt
+	@echo $<
+
+%.o: %.c
+	@$(CC)gcc.exe $(CFLAGS) $(INCS) -c $< -o $@
+	@$(CC)nm.exe $@ > $(basename $(@))_Symbols.txt
+	@echo $<
+
+$(ProjectName).elf: $(ASSEM_O) $(OBJ)
+	@$(CC)ld.exe -T linker.ld $(LIBS) $(ASSEM_O) $(OBJ) -o $@ -Map=MapFile.map
+	@echo "Generated $@"
+	
+	
+$(ProjectName).bin: $(ProjectName).elf
+	@$(CC)objcopy.exe -O binary $< $@
+	@echo "Generated $@"
+
+	
+ExplainSymbols: 
+	@$(system) python $(SymbolosExplainer)
+
+
+clean:
+	@rm -f *.o *.elf *.hex *.bin *.map *Symbols.txt *_Symbols_Explained.txt
+	@echo "Removed all binary, elf, symbols and object files"
